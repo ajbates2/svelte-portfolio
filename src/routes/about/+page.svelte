@@ -1,26 +1,76 @@
-<svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
-</svelte:head>
+<script>
+  import TechBlock from "../../components/About/TechBlock.svelte";
+</script>
 
-<div class="text-column">
-	<h1>About this app</h1>
+<section class="container">
+  <TechBlock />
+  <div class="bio">
+    <p>
+      Having worked in a restaurant and in the service industry for essentially
+      my whole life, I work great in a team, and especially great in high stress
+      situations. I can't wait to work with a great team of programmers and
+      developers to apply my knowledge to a different challenge everyday.
+    </p>
+    <p>
+      My love for technology is what ultimately pushed me to get into web
+      development. I enjoy video games (built multiple PC's), movies, and music.
+      When I'm not coding you might find me bartending (I love beer), or going
+      to see some live music (whenever we're allowed). Just like every other
+      millennial I collect vinyl and shoes.
+    </p>
+  </div>
+</section>
 
-	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-	</p>
+<style>
+  .container {
+    padding: 10vh 0;
+    display: grid;
+    grid-template-columns: 40vw auto;
+    grid-gap: 20px;
+    height: 100vh;
+  }
 
-	<pre>npm create svelte@latest</pre>
+  .bio {
+    padding: 10%;
+    grid-column: 2;
+    margin-right: 4vw;
+    line-height: 45px;
+    font-size: large;
+    font-weight: 200;
+    font-style: italic;
+    display: grid;
+    place-items: center;
+    background-color: var(--glass-background);
+    border-radius: 10px;
+    box-shadow: -4px 20px 36px 8px var(--background);
+    animation: FadeUp ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
 
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
+  @media only screen and (max-width: 900px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto;
+      padding: 5vh 5vw;
+      padding-top: 10vh;
+      height: inherit;
+    }
 
-	<p>
-		The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
-		using it with JavaScript disabled!
-	</p>
-</div>
+    .bio {
+      grid-row: 1;
+      grid-column: 1;
+      margin: 0;
+    }
+  }
+
+  @media only screen and (max-width: 650px) {
+    .bio {
+      font-size: medium;
+      line-height: 35px;
+    }
+    .container {
+      height: inherit;
+    }
+  }
+</style>
