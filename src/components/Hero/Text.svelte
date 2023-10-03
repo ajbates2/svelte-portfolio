@@ -4,9 +4,11 @@
 </script>
 
 <section class="container">
-  <h1 class="name">AJ Bates</h1>
+  <span>
+    <h1 class="name">AJ Bates</h1>
+    <h2 class="description">Full-Stack Developer</h2>
+  </span>
   <Icons />
-  <h2 class="description">Full-Stack Developer</h2>
   <Actions />
 </section>
 
@@ -37,6 +39,7 @@
     filter: drop-shadow(2px 1px 0px var(--background));
     font-style: italic;
     font-weight: 100;
+    margin-top: 0;
   }
 
   @media only screen and (max-width: 1000px) {

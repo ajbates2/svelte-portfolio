@@ -11,9 +11,12 @@
   import SvelteIcon from "~icons/logos/svelte-icon";
   import AzureIcon from "~icons/logos/azure-icon";
   import PostgresIcon from "~icons/logos/postgresql";
+
+  const techSkills = `< Tech Skills />`;
 </script>
 
 <div class="container">
+  <h2>{techSkills}</h2>
   <div class="icon_pair">
     <span>
       <ReactIcon />
@@ -90,7 +93,7 @@
 
 <style>
   .container {
-    padding: 5%;
+    padding: 36px;
     grid-column: 1;
     margin-left: 4vw;
     display: grid;
@@ -101,6 +104,15 @@
     animation: FadeUp ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+  }
+
+  h2 {
+    color: var(--yellow);
+    filter: drop-shadow(2px 1px 0px var(--background));
+    font-style: italic;
+    font-weight: 100;
+    margin-top: 0;
+    grid-column: 1 / span 3;
   }
 
   .icon_pair {
@@ -143,10 +155,11 @@
       grid-row: 2;
       margin: 0;
       grid-template-columns: 1fr 1fr 1fr;
+      padding: 18px;
     }
 
     .icon_pair span {
-      font-size: 45px;
+      font-size: 36px;
     }
   }
 
