@@ -7,10 +7,10 @@
   import ExpoIcon from "~icons/logos/expo-icon";
   import GitHubIcon from "~icons/logos/github-icon";
   import GitIcon from "~icons/logos/git-icon";
-  import GunIcon from "~icons/logos/gunjs";
   import SvelteIcon from "~icons/logos/svelte-icon";
   import AzureIcon from "~icons/logos/azure-icon";
   import PostgresIcon from "~icons/logos/postgresql";
+  import TypescriptIcon from "~icons/logos/typescript-icon";
 
   const techSkills = `< Tech Skills />`;
 </script>
@@ -37,9 +37,9 @@
   </div>
   <div class="icon_pair">
     <span>
-      <GunIcon />
+      <TypescriptIcon />
     </span>
-    <aside>Gun.js</aside>
+    <aside>Typescript</aside>
   </div>
   <div class="icon_pair">
     <span>
@@ -117,7 +117,7 @@
 
   .icon_pair {
     text-align: center;
-    margin: 30px;
+    margin: 16px;
   }
 
   .icon_pair span {
@@ -138,26 +138,16 @@
     font-style: italic;
   }
 
-  @media only screen and (max-width: 900px) {
-    .icon_pair span {
-      font-size: 45px;
-    }
-  }
-
   @media only screen and (max-width: 1100px) {
-    .container {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  @media only screen and (max-width: 900px) {
     .container {
       grid-row: 2;
       margin: 0;
       grid-template-columns: 1fr 1fr 1fr;
       padding: 18px;
     }
+  }
 
+  @media only screen and (max-width: 900px) {
     .icon_pair span {
       font-size: 36px;
     }

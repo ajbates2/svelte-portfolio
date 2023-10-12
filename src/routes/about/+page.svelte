@@ -64,13 +64,13 @@
   }
 
   span {
-    grid-row: 2;
     grid-column: 1;
+    grid-row: 1 / span 2;
     place-self: center;
     margin: 0 5%;
   }
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 1100px) {
     .container {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr auto;
@@ -84,6 +84,11 @@
       grid-column: 1;
       margin: 0;
     }
+
+    span {
+      margin: 0;
+      grid-row: 2;
+    }
   }
 
   @media only screen and (max-width: 650px) {
@@ -94,9 +99,6 @@
     }
     .container {
       height: inherit;
-    }
-    span {
-      margin: 0;
     }
   }
 </style>
