@@ -1,14 +1,22 @@
 <script>
 	import Header from "./Header.svelte";
 	import "./styles.css";
+	import { fly } from "svelte/transition";
+
+	export let data;
 </script>
 
 <div class="app">
 	<Header />
 
-	<main>
-		<slot />
-	</main>
+	{#key data.url}
+		<main
+			in:fly={{ x: -200, duration: 500, delay: 600 }}
+			out:fly={{ x: -200, duration: 500 }}
+		>
+			<slot />
+		</main>
+	{/key}
 </div>
 
 <style>

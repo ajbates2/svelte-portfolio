@@ -60,9 +60,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    animation: FadeDown ease 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
   }
 
   div {

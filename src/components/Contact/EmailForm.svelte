@@ -74,9 +74,6 @@
     padding: 2em;
     border-radius: 10px;
     box-shadow: -4px 20px 36px 8px var(--background);
-    animation: FadeUp ease 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
     transition: all 0.2s ease-out;
   }
 
