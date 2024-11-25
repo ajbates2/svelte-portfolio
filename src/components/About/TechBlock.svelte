@@ -95,7 +95,9 @@
   .container {
     padding: 36px;
     grid-column: 1;
-    margin-left: 4vw;
+    grid-row: 2;
+    margin: 0;
+    padding: 18px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: var(--glass-background);
@@ -133,21 +135,6 @@
     font-size: 12px;
     font-weight: 100;
     font-style: italic;
-  }
-
-  @media only screen and (max-width: 1100px) {
-    .container {
-      grid-row: 2;
-      margin: 0;
-      grid-template-columns: 1fr 1fr 1fr;
-      padding: 18px;
-    }
-  }
-
-  @media only screen and (max-width: 900px) {
-    .icon_pair span {
-      font-size: 36px;
-    }
   }
 
   @media only screen and (max-width: 400px) {
